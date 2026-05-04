@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AgriSense Dashboard</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<!-- Navbar -->
+<header class="navbar">
+
+    <div class="logo">🌾 <span>AgriSense</span></div>
+
+    <!-- Search -->
+    <div class="search-box">
+        <input type="text" placeholder="Search crops, weather, insights..." />
+        <button>🔍</button>
+    </div>
+
+    <!-- Nav -->
+    <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#">Modules</a>
+        <a href="#">Insights</a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="right-section">
+
+        <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
+
+        <div class="profile" onclick="toggleMenu()">
+            👤 Sukumar
+            <div class="dropdown" id="dropdownMenu">
+                <p>Profile</p>
+                <p>Settings</p>
+                <p>Logout</p>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Main -->
+<div class="container">
+    <h2 class="welcome">Welcome to Smart Farming System</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="icon">🌱</div>
+            <h3>Crop Recommendation</h3>
+            <p>Get best crops based on soil & season</p>
+            <button>Start</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Yield Prediction</h3>
+            <p>Estimate production</p>
+            <button>Start</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">💰</div>
+            <h3>Profit Estimation</h3>
+            <p>Calculate earnings</p>
+            <button>Start</button>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌦️</div>
+            <h3>Weather Insights</h3>
+            <p>Live weather updates</p>
+            <button>Start</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/home.js"></script>
+</body>
+</html>

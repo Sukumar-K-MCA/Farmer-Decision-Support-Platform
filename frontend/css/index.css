@@ -1,0 +1,209 @@
+/* 🌌 Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #1b5e20, #0d1f14);
+    color: white;
+    overflow: hidden;
+}
+
+/* Glow Effect */
+.background-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(76,175,80,0.4), transparent);
+    filter: blur(120px);
+}
+
+/* Glass Container */
+.loader-container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    animation: fadeIn 1.2s ease-in;
+}
+
+/* Title */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 0 0 20px rgba(76,175,80,0.9);
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* 🚜 Tractor Scene */
+.tractor-scene {
+    width: 260px;
+    height: 90px;
+    margin: 0 auto 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tractor */
+.tractor {
+    position: absolute;
+    bottom: 8px;
+    left: -80px;
+    animation: moveTractor 3.5s linear infinite,
+               bounce 0.6s ease-in-out infinite;
+}
+
+/* Tractor Body */
+.body {
+    width: 60px;
+    height: 22px;
+    background: #ffc107;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 6px;
+}
+
+/* Cabin */
+.cab {
+    width: 25px;
+    height: 25px;
+    background: #fff176;
+    position: absolute;
+    bottom: 45px;
+    left: 45px;
+    border-radius: 4px;
+}
+
+/* Wheels */
+.wheel {
+    width: 24px;
+    height: 24px;
+    background: #111;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: spin 0.5s linear infinite;
+}
+
+.wheel.back { left: 10px; }
+.wheel.front { left: 60px; width: 16px; height: 16px; }
+
+/* Shadow */
+.tractor::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 10px;
+    background: rgba(0,0,0,0.4);
+    bottom: -6px;
+    left: 10px;
+    border-radius: 50%;
+    filter: blur(5px);
+}
+
+/* 💨 Smoke container */
+.smoke {
+    position: absolute;
+    left: 50px;
+    bottom: 65px;
+}
+
+/* Smoke particles */
+.smoke span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: smokeRise 3.5s infinite ease-out;
+}
+
+/* Layered delays for realism */
+.smoke span:nth-child(1) { animation-delay: 0s; }
+.smoke span:nth-child(2) { animation-delay: 0.7s; }
+.smoke span:nth-child(3) { animation-delay: 1.4s; }
+.smoke span:nth-child(4) { animation-delay: 2.1s; }
+
+/* Smoke animation */
+@keyframes smokeRise {
+    0% {
+        opacity: 0.7;
+        transform: translate(0, 0) scale(0.8);
+    }
+    30% {
+        opacity: 0.6;
+        transform: translate(-5px, -15px) scale(1.2);
+    }
+    60% {
+        opacity: 0.3;
+        transform: translate(-10px, -30px) scale(1.6);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-15px, -50px) scale(2.2);
+    }
+}
+
+/* Movement */
+@keyframes moveTractor {
+    0% { left: -80px; }
+    100% { left: 280px; }
+}
+
+/* Wheel spin */
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Bounce (engine vibration) */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* Loader */
+.loader-bar {
+    width: 220px;
+    height: 8px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #66bb6a, #c8e6c9);
+    animation: load 3s linear forwards;
+    box-shadow: 0 0 15px #66bb6a;
+}
+
+@keyframes load {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Text */
+.loading-text {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Fade */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
