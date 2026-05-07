@@ -1,86 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriSense Dashboard</title>
+
     <link rel="stylesheet" href="frontend/css/home.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="bg-glow"></div>
+<!-- Background Effects -->
+<div class="bg-gradient"></div>
+<div class="bg-circle one"></div>
+<div class="bg-circle two"></div>
 
 <!-- Navbar -->
 <header class="navbar">
 
-    <div class="logo">🌾 <span>AgriSense</span></div>
+    <div class="logo-section">
+        <div class="logo-icon">🌾</div>
+        <h1>AgriSense</h1>
+    </div>
 
-    <!-- Search -->
     <div class="search-box">
-        <input type="text" placeholder="Search crops, weather, insights..." />
+        <input type="text" placeholder="Search crop insights, weather, yield...">
         <button>🔍</button>
     </div>
 
-    <!-- Nav -->
     <nav class="nav-links">
         <a href="#" class="active">Home</a>
         <a href="#">Modules</a>
-        <a href="#">Insights</a>
+        <a href="#">Analytics</a>
+        <a href="#">Reports</a>
     </nav>
 
-    <!-- Right Section -->
-    <div class="right-section">
+    <div class="profile-section">
+        <div class="theme-btn">🌙</div>
 
-        <span class="theme-toggle" onclick="toggleTheme()">🌙</span>
-
-        <div class="profile" onclick="toggleMenu()">
-            👤 Sukumar
-            <div class="dropdown" id="dropdownMenu">
-                <p>Profile</p>
-                <p>Settings</p>
-                <p>Logout</p>
-            </div>
+        <div class="profile-card">
+            <div class="profile-avatar">👨‍🌾</div>
+            <span>Sukumar</span>
         </div>
-
     </div>
 
 </header>
 
-<!-- Main -->
-<div class="container">
-    <h2 class="welcome">Welcome to Smart Farming System</h2>
+<!-- Hero Section -->
+<section class="hero-section">
 
-    <div class="card-container">
+    <div class="hero-left">
+        <p class="tag">SMART AGRICULTURE PLATFORM</p>
 
-        <div class="card">
-            <div class="icon">🌱</div>
+        <h2>
+            Empowering Farmers <br>
+            With Smart Decisions 🌱
+        </h2>
+
+        <p class="hero-description">
+            Analyze soil, predict crop yield, estimate profits,
+            and make better agricultural decisions using AI-powered insights.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="primary-btn">
+                Explore Modules
+            </button>
+
+            <button class="secondary-btn">
+                View Reports
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="hero-card">
+            <h3>🌦 Live Weather</h3>
+            <p>28°C • Moderate Rainfall</p>
+            <span>Perfect for Rice Cultivation</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- Dashboard Cards -->
+<section class="dashboard-section">
+
+    <div class="section-title">
+        <h2>Platform Modules</h2>
+        <p>Explore the intelligent agricultural tools</p>
+    </div>
+
+    <div class="cards-container">
+
+        <!-- Card 1 -->
+        <div class="dashboard-card">
+            <div class="card-icon">🌱</div>
             <h3>Crop Recommendation</h3>
-            <p>Get best crops based on soil & season</p>
-            <button>Start</button>
+            <p>
+                Suggests the best crop based on soil type,
+                rainfall, and season.
+            </p>
+
+            <button onclick="window.location.href='cropRecommendation.html'">
+                Open Module
+            </button>
         </div>
 
-        <div class="card">
-            <div class="icon">📊</div>
+        <!-- Card 2 -->
+        <div class="dashboard-card">
+            <div class="card-icon">📊</div>
             <h3>Yield Prediction</h3>
-            <p>Estimate production</p>
-            <button>Start</button>
+            <p>
+                Predict expected agricultural yield
+                using smart analysis.
+            </p>
+
+            <button>
+                Open Module
+            </button>
         </div>
 
-        <div class="card">
-            <div class="icon">💰</div>
+        <!-- Card 3 -->
+        <div class="dashboard-card">
+            <div class="card-icon">💰</div>
             <h3>Profit Estimation</h3>
-            <p>Calculate earnings</p>
-            <button>Start</button>
+            <p>
+                Estimate farmer profits based on crop yield
+                and market rates.
+            </p>
+
+            <button>
+                Open Module
+            </button>
         </div>
 
-        <div class="card">
-            <div class="icon">🌦️</div>
+        <!-- Card 4 -->
+        <div class="dashboard-card">
+            <div class="card-icon">🌦</div>
             <h3>Weather Insights</h3>
-            <p>Live weather updates</p>
-            <button>Start</button>
+            <p>
+                Access weather-based recommendations
+                for better farming decisions.
+            </p>
+
+            <button>
+                Open Module
+            </button>
         </div>
 
     </div>
-</div>
 
-<script src="js/home.js"></script>
+</section>
+
 </body>
 </html>

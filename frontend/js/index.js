@@ -1,4 +1,8 @@
-// Redirect after loading
 setTimeout(() => {
-    window.location.href = "home.html"; // your next page
-}, 6000);
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 800);
+
+}, 3500);

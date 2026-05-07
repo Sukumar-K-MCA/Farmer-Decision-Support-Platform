@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation</title>
+    <link rel="stylesheet" href="frontend/css/cropRecommendation.css">
+</head>
+<body>
+
+<div class="background-glow"></div>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">🌾 <span>AgriSense</span></div>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#" class="active">Crop Recommendation</a>
+    </nav>
+</header>
+
+<!-- Main Form Container -->
+<div class="form-container">
+
+    <h1>🌱 Crop Recommendation System</h1>
+    <p>Enter your farming details to get suitable crop suggestions.</p>
+
+    <form id="cropForm">
+
+        <div class="input-group">
+            <label>Soil Type</label>
+            <select id="soilType">
+                <option value="">Select Soil Type</option>
+                <option value="Black Soil">Black Soil</option>
+                <option value="Red Soil">Red Soil</option>
+                <option value="Alluvial Soil">Alluvial Soil</option>
+                <option value="Clay Soil">Clay Soil</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Season</label>
+            <select id="season">
+                <option value="">Select Season</option>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+                <option value="Monsoon">Monsoon</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Rainfall (mm)</label>
+            <input type="number" id="rainfall" placeholder="Enter rainfall">
+        </div>
+
+        <button type="submit">Get Recommendation</button>
+
+    </form>
+
+    <!-- Result -->
+    <div class="result-box" id="resultBox">
+        <h2>Recommended Crop:</h2>
+        <p id="resultText">Waiting for input...</p>
+    </div>
+
+</div>
+
+<script src="frontend/js/cropRecommendation.js"></script>
+</body>
+</html>
+
+

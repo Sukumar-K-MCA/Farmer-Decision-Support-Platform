@@ -1,43 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Farmer Decision Support</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriSense Loading</title>
+
     <link rel="stylesheet" href="frontend/css/index.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="background-glow"></div>
+<!-- Background Effects -->
+<div class="bg-gradient"></div>
+<div class="bg-circle one"></div>
+<div class="bg-circle two"></div>
 
-<div class="loader-container">
+<!-- Main Loader Container -->
+<div class="main-container">
 
-    <h1 class="title">🌾 Farmer Decision Support</h1>
+    <!-- Left Section -->
+    <div class="left-section">
 
-    <p class="subtitle">Smart Agriculture Intelligence</p>
-
-    <!-- Tractor -->
-    <div class="tractor-scene">
-        <div class="tractor">
-            <div class="wheel back"></div>
-            <div class="wheel front"></div>
-            <div class="body"></div>
-            <div class="cab"></div>
-            <div class="smoke">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="logo-box">
+            🌾
         </div>
+
+        <p class="tag">
+            SMART AGRICULTURE PLATFORM
+        </p>
+
+        <h1>
+            Empowering Farmers <br>
+            With Smart Decisions
+        </h1>
+
+        <p class="description">
+            Crop recommendation, yield prediction,
+            profit estimation, and intelligent farming insights.
+        </p>
+
+        <!-- Loader -->
+        <div class="loader-wrapper">
+
+            <div class="loader-bar">
+                <div class="progress"></div>
+            </div>
+
+            <span>Initializing Smart Modules...</span>
+
+        </div>
+
     </div>
 
-    <!-- Loader -->
-    <div class="loader-bar">
-        <div class="progress"></div>
-    </div>
+    <!-- Right Section -->
+    <div class="right-section">
 
-    <p class="loading-text">Analyzing Soil • Weather • Yield...</p>
+        <!-- Glass Card -->
+        <div class="glass-card">
+
+            <div class="tractor-scene">
+
+                <div class="tractor">
+                    <div class="grid-lines"></div>
+                    <div class="wheel back"></div>
+                    <div class="wheel front"></div>
+
+                    <div class="body"></div>
+                    <div class="cab"></div>
+
+                    <!-- Smoke -->
+                    <div class="smoke">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="particles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="status-box">
+
+                <div class="status-item">
+                    <span>🌧 Weather Analysis</span>
+                    <span class="active-dot"></span>
+                </div>
+
+                <div class="status-item">
+                    <span>🌱 Soil Intelligence</span>
+                    <span class="active-dot"></span>
+                </div>
+
+                <div class="status-item">
+                    <span>📊 Yield Prediction</span>
+                    <span class="active-dot"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 <script src="frontend/js/index.js"></script>
+
 </body>
 </html>
