@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriSense Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="bg-gradient"></div>
+<div class="bg-circle one"></div>
+<div class="bg-circle two"></div>
+
+<!-- Main Container -->
+<div class="login-container">
+
+    <!-- Left -->
+    <div class="login-left">
+
+        <div class="logo-box">
+            🌾
+        </div>
+
+        <p class="tag">
+            SMART AGRICULTURE PLATFORM
+        </p>
+
+        <h1>
+            Welcome Back <br>
+            To AgriSense
+        </h1>
+
+        <p class="description">
+            Login to access intelligent farming modules,
+            yield predictions, weather insights,
+            and profit estimations.
+        </p>
+
+    </div>
+
+    <!-- Right -->
+    <div class="login-right">
+
+        <div class="login-card">
+
+            <h2>Login Account</h2>
+
+            <p class="login-subtitle">
+                Continue your smart farming journey
+            </p>
+
+            <!-- Form -->
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <!-- Options -->
+                <div class="form-options">
+
+                    <label class="remember">
+                        <input type="checkbox">
+                        Remember Me
+                    </label>
+
+                    <a
+                    href="#"
+                    class="forgot-link"
+                    onclick="openForgot()">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <!-- Login -->
+                <button type="submit" class="login-btn">
+                    Login To Dashboard
+                </button>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <!-- Register -->
+                <button
+                    type="button"
+                    class="register-btn"
+                    onclick="openRegister()">
+
+                    Create New Account
+
+                </button>
+
+            </form>
+
+            <p class="bottom-text">
+                Smart Farming • AI Insights • Better Decisions
+            </p>
+
+        </div>
+        <!-- Register Modal -->
+<div class="register-modal" id="registerModal">
+
+    <div class="register-card">
+
+        <h2>Create Account</h2>
+
+        <p class="register-subtitle">
+            Join AgriSense Smart Farming Platform
+        </p>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter full name"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter email"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create password"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">
+                Register Account
+            </button>
+
+            <button
+                type="button"
+                class="close-btn"
+                onclick="closeRegister()">
+
+                Cancel
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Forgot Password Modal -->
+<div class="register-modal" id="forgotModal">
+
+    <div class="register-card">
+
+        <h2>Forgot Password</h2>
+
+        <p class="register-subtitle">
+            Recover your AgriSense account
+        </p>
+
+        <form id="forgotForm">
+
+            <div class="input-group">
+                <label>Registered Email</label>
+
+                <input
+                    type="email"
+                    id="forgotEmail"
+                    placeholder="Enter registered email"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">
+                Recover Password
+            </button>
+
+            <button
+                type="button"
+                class="close-btn"
+                onclick="closeForgot()">
+
+                Cancel
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<!-- Register Modal -->
+<div class="register-modal" id="registerModal">
+
+    <div class="register-card">
+
+        <h2>Create Account</h2>
+
+        <form id="registerForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter full name"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter email"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn">
+                Register Account
+            </button>
+
+            <button
+                type="button"
+                class="close-btn"
+                onclick="closeRegister()">
+
+                Cancel
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
